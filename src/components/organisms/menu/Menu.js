@@ -6,7 +6,7 @@ const Menu = ({ open, setOpen, ...props }) => {
   const handleCloseMenu = () => {
     setTimeout(() => {
       setOpen(!open);
-    }, 200);
+    }, 50);
   };
   return (
     <StyledMenu open={open} {...props}>

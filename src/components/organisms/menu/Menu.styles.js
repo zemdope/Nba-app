@@ -6,7 +6,7 @@ export const StyledMenu = styled.nav`
   position: absolute;
   flex-direction: column;
   justify-content: center;
-  background: ${({ theme }) => theme.primaryLight};
+  background: ${({ theme }) => theme.whiteColor};
   transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(-100%)')};
   height: 100vh;
   text-align: left;
@@ -15,7 +15,7 @@ export const StyledMenu = styled.nav`
   top: 0;
   left: 0;
   transition: transform 0.3s ease-in-out;
-  z-index: 9;
+  z-index: 8;
 
   @media (max-width: ${({ theme }) => theme.mobileXL}) {
     width: 100%;
