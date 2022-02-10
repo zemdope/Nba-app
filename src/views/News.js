@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import NewsCard from '../components/molecules/NewsCard/NewsCard';
-import { ButtonNews } from './News.styles';
+import { ButtonNews, Wrapper, Container } from './News.styles';
+import Loader from '../components/atoms/Loader/Loader';
 
 const News = () => {
   const [isClicked, setIsClicked] = useState(false);
+  const [news, setNews] = useState([]);
 
   const handleGetNews = () => {
     setIsClicked(!isClicked);
@@ -22,8 +24,8 @@ const News = () => {
 
     axios
       .request(options)
-      .then(function (response) {
-        console.log(response.data);
+      .then(function ({ data }) {
+        setNews(data);
       })
       .catch(function (error) {
         console.error(error);
@@ -31,12 +33,21 @@ const News = () => {
   }, []);
 
   return (
-    <>
-      <NewsCard isClicked={isClicked} />
+    <Container>
+      <Wrapper isClicked={isClicked}>
+        {news.length && isClicked ? (
+          news
+            .slice(0, 4)
+            .map((news) => <NewsCard key={news.title} newsData={news} />)
+        ) : (
+          <Loader />
+        )}
+      </Wrapper>
+
       <ButtonNews isClicked={isClicked} onClick={handleGetNews}>
-        Check news
+        Get news
       </ButtonNews>
-    </>
+    </Container>
   );
 };
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import png from '../../../assets/styles/img/logoNBA.png';
 import {
   Wrapper,
@@ -7,23 +7,25 @@ import {
   StyledCardBody,
   StyledSpan,
   StyledButton,
-  StyledP
+  ButtonContainer,
+  StyledA
 } from './NewsCard.styles';
 
-const NewsCard = () => {
+const NewsCard = ({ newsData: { source, title, url } }) => {
   return (
     <Wrapper>
       <StyledCard>
         <div>
-          <Image src={png} alt='rover' />
+          <Image src={png} alt='Nba logo' />
         </div>
         <StyledCardBody>
-          <StyledSpan>Technology</StyledSpan>
-          <h4>Why is the Tesla Cybertruck designed the way it is?</h4>
-          <StyledP>An exploration into the truck's polarising design</StyledP>
-          <div>
-            <StyledButton>Read more </StyledButton>
-          </div>
+          <StyledSpan>{source}</StyledSpan>
+          <h4>{title}</h4>
+          <ButtonContainer>
+            <StyledButton>
+              <StyledA href={url}>Read more </StyledA>
+            </StyledButton>
+          </ButtonContainer>
         </StyledCardBody>
       </StyledCard>
     </Wrapper>

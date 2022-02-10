@@ -19,8 +19,8 @@ const Start = () => {
 
     if (b.current) {
       b.current.to([a.current], {
-        y: '-350%',
-        duration: 0.4
+        y: '-550%',
+        duration: 0.6
       });
     }
   }, [currentSlide]);
