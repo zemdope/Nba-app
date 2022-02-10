@@ -25,11 +25,11 @@ const Root = () => {
         </FocusLock>
       </div>
       <Routes>
-        <Route path='/' exact element={<Start />} />
-        <Route path='news' element={<News />} />
-        <Route path='/games' element={<Games />} />
-        <Route path='standings' element={<Standings />} />
-        <Route path='contact' element={<Contact />} />
+        <Route path='/Nba-app' exact element={<Start />} />
+        <Route path='Nba-app/news' element={<News />} />
+        <Route path='Nba-app/games' element={<Games />} />
+        <Route path='Nba-app/standings' element={<Standings />} />
+        <Route path='Nba-app/contact' element={<Contact />} />
       </Routes>
     </>
   );
