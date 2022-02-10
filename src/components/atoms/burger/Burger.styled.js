@@ -5,8 +5,8 @@ export const StyledBurger = styled.button`
   flex-direction: column;
   justify-content: space-around;
   position: ${({ open }) => (open ? 'fixed' : 'absolute')};
-  top: 30px;
-  right: 30px;
+  top: 32px;
+  right: 32px;
   padding: 0;
   width: 2rem;
   height: 2rem;
