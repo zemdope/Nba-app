@@ -9,12 +9,6 @@ export const Wrapper = styled.div`
   height: 150px;
   background-color: ${({ theme }) => theme.blueColor};
   box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.35);
-
-  @media (min-width: ${({ theme }) => theme.desktop}) {
-    width: 330px;
-    height: 200px;
-    margin: 15px;
-  }
 `;
 export const StyledTeamContainer = styled.div`
   display: flex;
@@ -24,19 +18,10 @@ export const StyledTeamContainer = styled.div`
   height: 45%;
   font-size: 1.5rem;
   color: ${({ theme }) => theme.primaryDark};
-
-  @media (min-width: ${({ theme }) => theme.desktop}) {
-    font-size: 2rem;
-  }
 `;
 export const Logo = styled.img`
   width: 50px;
   height: 50px;
-
-  @media (min-width: ${({ theme }) => theme.desktop}) {
-    width: 65px;
-    height: 65px;
-  }
 `;
 
 export const StyledP = styled.p`
@@ -77,17 +62,5 @@ export const Span = styled.span`
   &::after {
     width: 150px;
     left: -410%;
-  }
-
-  @media (min-width: ${({ theme }) => theme.desktop}) {
-    margin-right: 70px;
-
-    &::before {
-      width: 60px;
-    }
-    &::after {
-      width: 210px;
-      left: -580%;
-    }
   }
 `;

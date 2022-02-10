@@ -10,7 +10,7 @@ export const ContainerGames = styled.div`
 export const Wrapper = styled.div`
   display: flex;
   height: 100vh;
-  margin: 130px 10px 0 10px;
+  margin: 150px 10px 0 10px;
 `;
 
 export const StyledDiv = styled.div`
