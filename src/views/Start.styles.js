@@ -16,6 +16,7 @@ export const StyledButton = styled.button`
   flex-grow: 1;
   height: 7.5rem;
   width: 7.5rem;
+  box-shadow: 0px 5px 10px -2px rgba(8, 8, 8, 1);
 
   &::before {
     content: '';
@@ -26,7 +27,7 @@ export const StyledButton = styled.button`
     width: 100%;
     height: 100%;
     background-color: ${({ theme }) => theme.roseColor};
-    transition: transform 0.1s ease;
+    transition: transform 0.3s ease;
     z-index: -1;
   }
   &:hover::before {
@@ -63,4 +64,8 @@ export const Container = styled.div`
 
 export const Wrapper = styled.div`
   transform: translateY(0%);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;

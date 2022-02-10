@@ -7,18 +7,20 @@ const Start = () => {
   const a = React.useRef(null);
   const b = React.useRef(null);
   const [currentSlide, setCurrentSlide] = React.useState(1);
+  const path = ['games', 'standings', 'news', 'contact'];
 
   const handleOnClick = () => {
     currentSlide === 1 ? setCurrentSlide(2) : setCurrentSlide(1);
     b.current.play();
   };
+
   React.useEffect(() => {
     b.current = gsap.timeline({ paused: true });
 
     if (b.current) {
       b.current.to([a.current], {
-        y: '-250%',
-        duration: 0.5
+        y: '-350%',
+        duration: 0.4
       });
     }
   }, [currentSlide]);
@@ -28,19 +30,10 @@ const Start = () => {
     let idButton = e.target.id;
 
     setTimeout(() => {
-      if (idButton == 1) {
-        let path = `games`;
-        navigate(path);
-      } else if (idButton == 2) {
-        let path = `standings`;
-        navigate(path);
-      } else if (idButton == 3) {
-        let path = `news`;
-        navigate(path);
-      } else {
-        let path = `contact`;
-        navigate(path);
-      }
+      if (idButton == 1) return navigate(path[0]);
+      if (idButton == 2) navigate(path[1]);
+      if (idButton == 3) return navigate(path[2]);
+      return navigate(path[3]);
     }, 500);
   };
 

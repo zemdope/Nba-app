@@ -3,17 +3,16 @@ import { NavLink } from 'react-router-dom';
 
 export const StyledMenu = styled.nav`
   display: flex;
-  position: absolute;
   flex-direction: column;
   justify-content: center;
-  background: ${({ theme }) => theme.whiteColor};
-  transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(-100%)')};
-  height: 100vh;
-  text-align: left;
-  padding: 2rem;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
+  height: 100%;
+  text-align: left;
+  padding: 2rem;
+  background: ${({ theme }) => theme.whiteColor};
+  transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(-100%)')};
   transition: transform 0.3s ease-in-out;
   z-index: 8;
 
@@ -23,7 +22,7 @@ export const StyledMenu = styled.nav`
 `;
 const activeclassname = 'active-link';
 
-export const NavItem = styled(NavLink).attrs({ activeclassname })`
+export const Link = styled(NavLink).attrs({ activeclassname })`
   font-size: 2rem;
   text-transform: uppercase;
   padding: 2rem 0;

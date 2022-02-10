@@ -1,6 +1,6 @@
 import React from 'react';
 import { bool } from 'prop-types';
-import { StyledMenu, NavItem } from './Menu.styles';
+import { StyledMenu, Link } from './Menu.styles';
 
 const Menu = ({ open, setOpen, ...props }) => {
   const handleCloseMenu = () => {
@@ -10,21 +10,21 @@ const Menu = ({ open, setOpen, ...props }) => {
   };
   return (
     <StyledMenu open={open} {...props}>
-      <NavItem onClick={handleCloseMenu} to='/'>
+      <Link onClick={handleCloseMenu} to='/'>
         Start
-      </NavItem>
-      <NavItem onClick={handleCloseMenu} to='/games'>
+      </Link>
+      <Link onClick={handleCloseMenu} to='/games'>
         Games
-      </NavItem>
-      <NavItem onClick={handleCloseMenu} to='standings'>
+      </Link>
+      <Link onClick={handleCloseMenu} to='standings'>
         Stantings
-      </NavItem>
-      <NavItem onClick={handleCloseMenu} to='news'>
+      </Link>
+      <Link onClick={handleCloseMenu} to='news'>
         News
-      </NavItem>
-      <NavItem onClick={handleCloseMenu} to='contact'>
+      </Link>
+      <Link onClick={handleCloseMenu} to='contact'>
         Contact
-      </NavItem>
+      </Link>
     </StyledMenu>
   );
 };

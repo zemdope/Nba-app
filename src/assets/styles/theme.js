@@ -8,5 +8,7 @@ export const theme = {
   whiteColor: '#FFFFFF',
   mobileL: '320px',
   mobileXL: '576px',
-  mobileXXL: '768px'
+  mobileXXL: '768px',
+  tablet: '1024px',
+  desktop: '1280px'
 };
