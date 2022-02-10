@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.js": "/Nba-app/static/js/main.c1efc181.js",
+    "main.js": "/Nba-app/static/js/main.c0d71da3.js",
     "static/media/logoNBA.png": "/Nba-app/static/media/logoNBA.b98c4bc0b171ae8787da.png",
     "index.html": "/Nba-app/index.html",
-    "main.c1efc181.js.map": "/Nba-app/static/js/main.c1efc181.js.map"
+    "main.c0d71da3.js.map": "/Nba-app/static/js/main.c0d71da3.js.map"
   },
   "entrypoints": [
-    "static/js/main.c1efc181.js"
+    "static/js/main.c0d71da3.js"
   ]
 }
