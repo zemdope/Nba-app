@@ -37,7 +37,7 @@ const News = () => {
       <Wrapper isClicked={isClicked}>
         {news.length && isClicked ? (
           news
-            .slice(0, 4)
+            .slice(0, 6)
             .map((news) => <NewsCard key={news.title} newsData={news} />)
         ) : (
           <Loader />

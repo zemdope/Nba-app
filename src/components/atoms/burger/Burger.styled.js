@@ -6,7 +6,7 @@ export const StyledBurger = styled.button`
   justify-content: space-around;
   position: ${({ open }) => (open ? 'fixed' : 'absolute')};
   top: 30px;
-  left: 30px;
+  right: 30px;
   padding: 0;
   width: 2rem;
   height: 2rem;

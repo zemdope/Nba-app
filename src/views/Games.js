@@ -27,7 +27,7 @@ const Games = () => {
       .then((res) => {
         const data = res.data.api.games;
         const arr = data.map((games) => games);
-        console.log(arr);
+
         setGames(arr);
       })
       .catch(function (error) {
